@@ -10,6 +10,7 @@
           <e p="BasicMoving" t="Include">
             <e p="GravityTurnOff.cs" t="Include" />
             <e p="RotateWithGravity.cs" t="Include" />
+            <e p="SelfMoving.cs" t="Include" />
           </e>
           <e p="Item" t="Include">
             <e p="BulletCollide.cs" t="Include" />

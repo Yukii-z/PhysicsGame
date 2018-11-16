@@ -32,7 +32,7 @@ public class ShootBullet : MonoBehaviour
 			bulletVelo=(mousePos - center.transform.position) *bulletSpeed;
 			
 			GameObject temp = GameObject.Instantiate(bulletPrefab,center.transform.position,
-				center.transform.rotation, center.transform);
+				center.transform.rotation, transform);
 			temp.GetComponent<Rigidbody2D>().velocity = bulletVelo;
 		}
 	}
