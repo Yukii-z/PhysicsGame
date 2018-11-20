@@ -7,10 +7,14 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
-          <e p="BasicMoving" t="Include">
+          <e p="BasicForce" t="Include">
             <e p="GravityTurnOff.cs" t="Include" />
+            <e p="RepulsiveForce.cs" t="Include" />
             <e p="RotateWithGravity.cs" t="Include" />
             <e p="SelfMoving.cs" t="Include" />
+          </e>
+          <e p="Control" t="Include">
+            <e p="MouseMoveItem.cs" t="Include" />
           </e>
           <e p="Item" t="Include">
             <e p="BulletCollide.cs" t="Include" />
