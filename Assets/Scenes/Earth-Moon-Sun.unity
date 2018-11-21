@@ -220,8 +220,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 522, y: -565}
-  m_SizeDelta: {x: 343.7, y: 140.7}
+  m_AnchoredPosition: {x: 492, y: -570}
+  m_SizeDelta: {x: 277.6, y: 114.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &219779060
 MonoBehaviour:
@@ -244,7 +244,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 100
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -408,23 +408,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc256822d5e1731428c11b7a093a4e59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0
-  interval: 1
-  repeatCount: 1
   autoStart: 0
-  autoDestory: 1
   currentTime: 0
-  currentCount: 0
-  onIntervalEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onCompleteEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &864152288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1055,7 +1040,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1642474272}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f6dfaf5893508a46ba4a6884cf5c97b, type: 3}
   m_Name: 
@@ -1105,7 +1090,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1642474272}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb68f12cd55a034e876b796e8f402c1, type: 3}
   m_Name: 
@@ -1133,7 +1118,7 @@ Rigidbody2D:
   m_Material: {fileID: 6200000, guid: 255af72ffd80276438c227f46a5c7b18, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!58 &1642474279
 CircleCollider2D:
@@ -1235,7 +1220,7 @@ GameObject:
   - component: {fileID: 1646777006}
   m_Layer: 5
   m_Name: HighScore
-  m_TagString: Timer
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
