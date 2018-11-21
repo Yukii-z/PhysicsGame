@@ -14,11 +14,17 @@
             <e p="SelfMoving.cs" t="Include" />
           </e>
           <e p="Control" t="Include">
-            <e p="MouseMoveItem.cs" t="Include" />
+            <e p="GameSet.cs" t="Include" />
+            <e p="HIghestScore.cs" t="Include" />
+            <e p="Timer.cs" t="Include" />
           </e>
           <e p="Item" t="Include">
             <e p="BulletCollide.cs" t="Include" />
             <e p="ShootBullet.cs" t="Include" />
+          </e>
+          <e p="StarpenControl" t="Include">
+            <e p="GameEnd.cs" t="Include" />
+            <e p="MouseMoveItem.cs" t="Include" />
           </e>
         </e>
       </e>
