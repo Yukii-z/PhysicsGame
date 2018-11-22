@@ -25,7 +25,6 @@ public class Timer : MonoBehaviour {
     }
 
     void FixedUpdate () {
-        Debug.Log("Time");
         if (GameSet.Instance.gameSituation==EGameProcess.PlayGame){         
             currentTime += Time.deltaTime;
             timer.GetComponent<Text>().text = currentTime.ToString("f2");}
@@ -110,6 +109,20 @@ public class Timer : MonoBehaviour {
     public void restart() {
         reset();
         start();
+    }
+
+    public void HighScoreRecord()
+    {
+        float scoreNow = Convert.ToSingle(timer.GetComponent<Text>().text);
+        float highScore = Convert.ToSingle(timer.transform.parent.Find("HighScore").GetComponent<Text>().text);
+        Debug.Log(timer.transform.parent.Find("HighScore").GetComponent<Text>().text);
+        Debug.Log(scoreNow);
+        Debug.Log(highScore);
+        if (scoreNow > highScore)
+        {
+            timer.transform.parent.Find("HighScore").GetComponent<Text>().text=scoreNow.ToString("f2");
+        }
+        
     }
 
 }

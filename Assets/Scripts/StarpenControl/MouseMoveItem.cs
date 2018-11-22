@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class MouseMoveItem : MonoBehaviour
 {
+	//general control parameters of mouse
 	private Vector3 mousePos;
 	public float dragForce = 5.0f;
+	
+	//drawLine
 	public Material lineMat;
 	public GameObject startLineObj;
+	public Vector3 startPenPos;                               	
 	private Vector3 startLinePos;
 	private LineRenderer line;
-	public Vector3 startPenPos;
+
+	//mouse control details
+	public float controDis=5.0f;
+	public float slowVel;
+	public float slowSpeed=0.5f;
 	// Use this for initialization
 	void Start ()
 	{
@@ -35,7 +43,16 @@ public class MouseMoveItem : MonoBehaviour
 			mousePos = Input.mousePosition;
 			//Debug.Log(mousePos);
 			mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-			GetComponent<Rigidbody2D>().AddForce(dragForce*(mousePos-transform.position));
+			if ((mousePos - transform.position).magnitude < controDis)
+			{
+				Debug.Log("Move");
+				GetComponent<Rigidbody2D>().AddForce(dragForce * (mousePos - transform.position));
+			}
+			else if(GetComponent<Rigidbody2D>().velocity.magnitude!=0.0f)
+			{
+				slowVel = Mathf.Lerp(GetComponent<Rigidbody2D>().velocity.magnitude, 0.0f, slowSpeed * Time.deltaTime);
+				GetComponent<Rigidbody2D>().velocity = slowVel * GetComponent<Rigidbody2D>().velocity.normalized;
+			}
 		}
 	
 		DrawLine(startLinePos,transform.position);

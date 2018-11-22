@@ -17,7 +17,7 @@ public class GameEnd : MonoBehaviour
 		{
 			Debug.Log("GameEnd");
 			GameSet.Instance.gameSituation = EGameProcess.StopGame;
-			centerController.GetComponent<Timer>().stop();
+			centerController.GetComponent<Timer>().stop(); 
 			Time.timeScale = 0;
 		}
 	}

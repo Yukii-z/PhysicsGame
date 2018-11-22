@@ -1033,6 +1033,9 @@ MonoBehaviour:
   lineMat: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   startLineObj: {fileID: 1696378903}
   startPenPos: {x: 0, y: 0, z: 0}
+  controDis: 10
+  slowVel: 0
+  slowSpeed: 0.5
 --- !u!114 &1642474274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1040,7 +1043,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1642474272}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f6dfaf5893508a46ba4a6884cf5c97b, type: 3}
   m_Name: 

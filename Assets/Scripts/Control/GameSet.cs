@@ -24,18 +24,20 @@ public class GameSet : MonoBehaviour
 	void Start ()
 	{
 		gameSituation = EGameProcess.PreparedGame;
+		GetComponent<Timer>().enabled = true;
+		Time.timeScale = 0;
 	}
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetMouseButtonDown(0) && gameSituation == EGameProcess.StopGame)
 		{
+			gameObject.GetComponent<Timer>().HighScoreRecord();
 			Reset();
 			gameSituation = EGameProcess.PreparedGame;
-		}
-
-		if (Input.GetMouseButtonDown(0) && gameSituation == EGameProcess.PreparedGame)
+		}else if (Input.GetMouseButtonDown(0) && gameSituation == EGameProcess.PreparedGame)
 		{
 			gameSituation = EGameProcess.PlayGame;
+			Time.timeScale = 1;
 		}
 	}
 
