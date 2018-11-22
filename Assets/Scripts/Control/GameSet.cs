@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class GameSet : MonoBehaviour
@@ -19,6 +20,7 @@ public class GameSet : MonoBehaviour
 	}
 	
 	public EGameProcess gameSituation;
+	public bool highScore;
 	
 	// Use this for initialization
 	void Start ()
@@ -31,7 +33,15 @@ public class GameSet : MonoBehaviour
 	void Update () {
 		if (Input.GetMouseButtonDown(0) && gameSituation == EGameProcess.StopGame)
 		{
-			gameObject.GetComponent<Timer>().HighScoreRecord();
+			if (highScore)
+			{
+				gameObject.GetComponent<Timer>().HighScoreRecord();
+			}
+			else
+			{
+				gameObject.GetComponent<Timer>().LowScoreRecord();
+			}
+
 			Reset();
 			gameSituation = EGameProcess.PreparedGame;
 		}else if (Input.GetMouseButtonDown(0) && gameSituation == EGameProcess.PreparedGame)

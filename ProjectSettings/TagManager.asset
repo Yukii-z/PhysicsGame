@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Starpen
   - Timer
+  - CountTime
   layers:
   - Default
   - TransparentFX

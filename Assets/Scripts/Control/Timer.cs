@@ -114,15 +114,27 @@ public class Timer : MonoBehaviour {
     public void HighScoreRecord()
     {
         float scoreNow = Convert.ToSingle(timer.GetComponent<Text>().text);
-        float highScore = Convert.ToSingle(timer.transform.parent.Find("HighScore").GetComponent<Text>().text);
-        Debug.Log(timer.transform.parent.Find("HighScore").GetComponent<Text>().text);
+        float highScore = Convert.ToSingle(timer.transform.parent.Find("Score").GetComponent<Text>().text);
+        Debug.Log(timer.transform.parent.Find("Score").GetComponent<Text>().text);
         Debug.Log(scoreNow);
         Debug.Log(highScore);
         if (scoreNow > highScore)
         {
-            timer.transform.parent.Find("HighScore").GetComponent<Text>().text=scoreNow.ToString("f2");
-        }
-        
+            timer.transform.parent.Find("Score").GetComponent<Text>().text=scoreNow.ToString("f2");
+        } 
+    }
+    
+    public void LowScoreRecord()
+    {
+        float scoreNow = Convert.ToSingle(timer.GetComponent<Text>().text);
+        float lowScore = Convert.ToSingle(timer.transform.parent.Find("Score").GetComponent<Text>().text);
+        Debug.Log(timer.transform.parent.Find("Score").GetComponent<Text>().text);
+        Debug.Log(scoreNow);
+        Debug.Log(lowScore);
+        if (scoreNow < lowScore)
+        {
+            timer.transform.parent.Find("Score").GetComponent<Text>().text=scoreNow.ToString("f2");
+        } 
     }
 
 }
