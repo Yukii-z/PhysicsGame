@@ -188,6 +188,10 @@ MonoBehaviour:
   dragForce: 3
   lineMat: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   startLineObj: {fileID: 1891526988918924}
+  startPenPos: {x: 0, y: 0, z: 0}
+  controDis: 5
+  slowVel: 0
+  slowSpeed: 0.5
 --- !u!212 &212406344301870142
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -228,7 +232,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 6.26, y: 6.26}
+  m_Size: {x: 10.8, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
