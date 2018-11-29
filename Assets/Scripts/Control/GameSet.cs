@@ -23,8 +23,7 @@ public class GameSet : MonoBehaviour
 	public bool highScore;
 	
 	// Use this for initialization
-	void Start ()
-	{
+	void Start (){
 		gameSituation = EGameProcess.PreparedGame;
 		GetComponent<Timer>().enabled = true;
 		Time.timeScale = 0;
