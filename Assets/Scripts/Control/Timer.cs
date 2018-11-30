@@ -137,4 +137,8 @@ public class Timer : MonoBehaviour {
         } 
     }
 
+    void ChangeSection()
+    {
+        
+    }
 }

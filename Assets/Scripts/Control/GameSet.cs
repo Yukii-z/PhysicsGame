@@ -57,6 +57,7 @@ public class GameSet : MonoBehaviour
 		gameObject.GetComponent<Timer>().reset();
 		GameObject.FindGameObjectWithTag("Starpen").transform.position = 
 			GameObject.FindGameObjectWithTag("Starpen").GetComponent<MouseMoveItem>().startPenPos;
+		StarArrow.Instance.StarReset();
 	}
 }
 

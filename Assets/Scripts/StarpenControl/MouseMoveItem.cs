@@ -19,6 +19,8 @@ public class MouseMoveItem : MonoBehaviour
 	public float controDis=5.0f;
 	public float slowVel;
 	public float slowSpeed=0.5f;
+
+	public float outOfMouseRageFadingSpeed = 0.9f;
 	// Use this for initialization
 	void Start ()
 	{
@@ -45,11 +47,17 @@ public class MouseMoveItem : MonoBehaviour
 			mousePos = Camera.main.ScreenToWorldPoint(mousePos);
 			if ((mousePos - transform.position).magnitude < controDis)
 			{
-				Debug.Log("Move");
-				GetComponent<Rigidbody2D>().AddForce(dragForce * (mousePos - transform.position));
+				gameObject.GetComponent<SpriteRenderer>().color = 
+					new Color(gameObject.GetComponent<SpriteRenderer>().color.g,gameObject.GetComponent<SpriteRenderer>().color.b,
+						gameObject.GetComponent<SpriteRenderer>().color.r,Mathf.Lerp(gameObject.GetComponent<SpriteRenderer>().color.a, 1.0f, outOfMouseRageFadingSpeed* Time.deltaTime));
+				GetComponent<Rigidbody2D>().AddForce(dragForce * (mousePos - transform.position),ForceMode2D.Impulse);
 			}
 			else if(GetComponent<Rigidbody2D>().velocity.magnitude!=0.0f)
 			{
+				gameObject.GetComponent<SpriteRenderer>().color = 
+					new Color(gameObject.GetComponent<SpriteRenderer>().color.g,gameObject.GetComponent<SpriteRenderer>().color.b,
+						gameObject.GetComponent<SpriteRenderer>().color.r,Mathf.Lerp(gameObject.GetComponent<SpriteRenderer>().color.a, 0.3f, outOfMouseRageFadingSpeed* Time.deltaTime));
+				GetComponent<Rigidbody2D>().AddForce(dragForce * (mousePos - transform.position));
 				slowVel = Mathf.Lerp(GetComponent<Rigidbody2D>().velocity.magnitude, 0.0f, slowSpeed * Time.deltaTime);
 				GetComponent<Rigidbody2D>().velocity = slowVel * GetComponent<Rigidbody2D>().velocity.normalized;
 			}
