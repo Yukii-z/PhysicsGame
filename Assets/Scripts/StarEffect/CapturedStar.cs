@@ -26,11 +26,10 @@ public class CapturedStar : MonoBehaviour
             line.endColor=Color.white;//设置直线颜色
             line.startWidth = 0.1f;
             line.endWidth = 0.1f;//设置直线宽度
-            /*if (startStarPos != new Vector3(0f,0f,0f))
+            if (startStarPos != new Vector3(0f,0f,0f))
             {
                 starDrawing = true;
-            }*/
-            starDrawing = true;
+            }
         }
     }
 
