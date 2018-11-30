@@ -43,7 +43,7 @@ public class RotateWithGravity : MonoBehaviour
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
-		if (!Earth.GetComponent<SpriteRenderer>().enabled)
+		if (Earth.GetComponent<SpriteRenderer>().enabled)
 		{
 			centrolPos = Earth.transform.position;
 			objPosNoZ = transform.position;

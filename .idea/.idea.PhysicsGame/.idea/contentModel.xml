@@ -26,6 +26,7 @@
           <e p="StarEffect" t="Include">
             <e p="CapturedStar.cs" t="Include" />
             <e p="StarArrow.cs" t="Include" />
+            <e p="StarSpeedControl.cs" t="Include" />
           </e>
           <e p="StarpenControl" t="Include">
             <e p="GameEnd.cs" t="Include" />

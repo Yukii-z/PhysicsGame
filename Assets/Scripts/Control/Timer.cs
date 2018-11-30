@@ -27,7 +27,8 @@ public class Timer : MonoBehaviour {
     void FixedUpdate () {
         if (GameSet.Instance.gameSituation==EGameProcess.PlayGame){         
             currentTime += Time.deltaTime;
-            timer.GetComponent<Text>().text = currentTime.ToString("f2");}
+            timer.GetComponent<Text>().text = currentTime.ToString("f2");
+            }
     }
 
     
@@ -102,7 +103,7 @@ public class Timer : MonoBehaviour {
     /// <summary> 停止Timer并重置数据 </summary>
     public void reset(){
         lastTime = currentTime = currentCount = 0;
-        timer.GetComponent<Text>().text = "0.00";
+        //timer.GetComponent<Text>().text = "0.00";
     }
 
     /// <summary> 重置数据并重新开始计时 </summary>

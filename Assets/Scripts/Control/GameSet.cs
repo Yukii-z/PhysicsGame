@@ -34,14 +34,14 @@ public class GameSet : MonoBehaviour
 	void Update () {
 		if (Input.GetMouseButtonDown(0) && gameSituation == EGameProcess.StopGame)
 		{
-			if (highScore)
+			/*if (highScore)
 			{
 				gameObject.GetComponent<Timer>().HighScoreRecord();
 			}
 			else
 			{
 				gameObject.GetComponent<Timer>().LowScoreRecord();
-			}
+			}*/
 
 			Reset();
 			gameSituation = EGameProcess.PreparedGame;
@@ -58,6 +58,7 @@ public class GameSet : MonoBehaviour
 		GameObject.FindGameObjectWithTag("Starpen").transform.position = 
 			GameObject.FindGameObjectWithTag("Starpen").GetComponent<MouseMoveItem>().startPenPos;
 		StarArrow.Instance.StarReset();
+		GetComponent<SectionChange>().reset();
 	}
 }
 

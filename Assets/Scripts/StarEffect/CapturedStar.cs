@@ -41,8 +41,8 @@ public class CapturedStar : MonoBehaviour
             realTimeRatio = realTimeRatio + lineDrawSpeed * Time.deltaTime;
             realTimePos = realTimeRatio * (endStarPos - startStarPos) + startStarPos;
             line.SetPosition(0, startStarPos);
-            line.SetPosition(1, endStarPos);
-            if (realTimeRatio > 0.99)
+            line.SetPosition(1, realTimePos);
+            if (realTimeRatio > 0.99f)
             {
                 starDrawing = false;
             }

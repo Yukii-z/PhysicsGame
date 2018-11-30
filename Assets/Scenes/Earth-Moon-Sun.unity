@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 119628680}
   - component: {fileID: 119628679}
   - component: {fileID: 119628678}
+  - component: {fileID: 119628681}
   m_Layer: 11
   m_Name: Moon (4)
   m_TagString: UniverseStars
@@ -308,7 +309,7 @@ CircleCollider2D:
   m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 8f93acd1feb652e46b405ddce9173133, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -406,6 +407,18 @@ MonoBehaviour:
   speed: 1
   startGrav: 0.001
   gravityDirectionChangeDis: 7
+--- !u!114 &119628681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 119628670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2c252ed3c4ca043b8c4d4572a41063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  properSpeed: 0
 --- !u!1 &219779058
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,6 +512,7 @@ GameObject:
   - component: {fileID: 308002063}
   - component: {fileID: 308002062}
   - component: {fileID: 308002061}
+  - component: {fileID: 308002064}
   m_Layer: 11
   m_Name: Moon (3)
   m_TagString: UniverseStars
@@ -601,7 +615,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 8f93acd1feb652e46b405ddce9173133, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -699,6 +713,18 @@ MonoBehaviour:
   speed: 1
   startGrav: 0.001
   gravityDirectionChangeDis: 9
+--- !u!114 &308002064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 308002053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2c252ed3c4ca043b8c4d4572a41063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  properSpeed: 0
 --- !u!1 &310795754
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,6 +743,7 @@ GameObject:
   - component: {fileID: 310795764}
   - component: {fileID: 310795763}
   - component: {fileID: 310795762}
+  - component: {fileID: 310795765}
   m_Layer: 11
   m_Name: Moon (5)
   m_TagString: UniverseStars
@@ -819,7 +846,7 @@ CircleCollider2D:
   m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 8f93acd1feb652e46b405ddce9173133, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -917,6 +944,18 @@ MonoBehaviour:
   speed: 1
   startGrav: 0.001
   gravityDirectionChangeDis: 7
+--- !u!114 &310795765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 310795754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2c252ed3c4ca043b8c4d4572a41063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  properSpeed: 0
 --- !u!1 &373244241
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,8 +1001,8 @@ GameObject:
   - component: {fileID: 434874036}
   - component: {fileID: 434874046}
   - component: {fileID: 434874045}
-  - component: {fileID: 434874044}
   - component: {fileID: 434874043}
+  - component: {fileID: 434874047}
   m_Layer: 11
   m_Name: Moon
   m_TagString: UniverseStars
@@ -1052,7 +1091,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 8f93acd1feb652e46b405ddce9173133, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1134,21 +1173,6 @@ MonoBehaviour:
   speed: 0
   startGrav: 0.001
   gravityDirectionChangeDis: 5
---- !u!114 &434874044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 434874035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb68f12cd55a034e876b796e8f402c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Earth: {fileID: 434874035}
-  speed: 0
-  startGrav: 0.001
-  gravityDirectionChangeDis: 8
 --- !u!114 &434874045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1179,6 +1203,18 @@ MonoBehaviour:
   speed: 30
   startGrav: 0.02
   gravityDirectionChangeDis: 9
+--- !u!114 &434874047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 434874035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2c252ed3c4ca043b8c4d4572a41063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  properSpeed: 0
 --- !u!1 &437717588
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,6 +1443,7 @@ GameObject:
   - component: {fileID: 655425266}
   - component: {fileID: 655425265}
   - component: {fileID: 655425264}
+  - component: {fileID: 655425267}
   m_Layer: 11
   m_Name: Moon (2)
   m_TagString: UniverseStars
@@ -1495,7 +1532,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 8f93acd1feb652e46b405ddce9173133, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1607,6 +1644,18 @@ MonoBehaviour:
   speed: 30
   startGrav: 0.02
   gravityDirectionChangeDis: 9
+--- !u!114 &655425267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 655425256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2c252ed3c4ca043b8c4d4572a41063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  properSpeed: 0
 --- !u!1 &802585755
 GameObject:
   m_ObjectHideFlags: 0
@@ -1625,6 +1674,7 @@ GameObject:
   - component: {fileID: 802585765}
   - component: {fileID: 802585764}
   - component: {fileID: 802585763}
+  - component: {fileID: 802585766}
   m_Layer: 11
   m_Name: Moon (6)
   m_TagString: UniverseStars
@@ -1727,7 +1777,7 @@ CircleCollider2D:
   m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 8f93acd1feb652e46b405ddce9173133, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1825,6 +1875,18 @@ MonoBehaviour:
   speed: 1
   startGrav: 0.001
   gravityDirectionChangeDis: 7
+--- !u!114 &802585766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 802585755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2c252ed3c4ca043b8c4d4572a41063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  properSpeed: 0
 --- !u!1 &864152284
 GameObject:
   m_ObjectHideFlags: 0
@@ -2693,9 +2755,6 @@ GameObject:
   - component: {fileID: 1642474280}
   - component: {fileID: 1642474279}
   - component: {fileID: 1642474278}
-  - component: {fileID: 1642474277}
-  - component: {fileID: 1642474276}
-  - component: {fileID: 1642474275}
   - component: {fileID: 1642474274}
   - component: {fileID: 1642474273}
   - component: {fileID: 1642474282}
@@ -2718,11 +2777,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9514e9f67d29dbe4c9211d1cadfd4d1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragForce: 0.03
+  dragForce: 0.02
   lineMat: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   startLineObj: {fileID: 1696378903}
   startPenPos: {x: 0, y: 0, z: 0}
-  controDis: 10
+  controDis: 20
   slowVel: 0
   slowSpeed: 0.5
   outOfMouseRageFadingSpeed: 0.9
@@ -2744,54 +2803,6 @@ MonoBehaviour:
   xMax: 4.4
   forceStrength: 1
   forceLimit: 50
---- !u!114 &1642474275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114354796630298778, guid: 81c789934b34fb44bae046f18782090e,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1642474272}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb68f12cd55a034e876b796e8f402c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Earth: {fileID: 308002053}
-  speed: 0
-  startGrav: 0.001
-  gravityDirectionChangeDis: 0
---- !u!114 &1642474276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114365947735645534, guid: 81c789934b34fb44bae046f18782090e,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1642474272}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb68f12cd55a034e876b796e8f402c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Earth: {fileID: 655425256}
-  speed: 0
-  startGrav: 0.001
-  gravityDirectionChangeDis: 0
---- !u!114 &1642474277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114625559637998408, guid: 81c789934b34fb44bae046f18782090e,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1642474272}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb68f12cd55a034e876b796e8f402c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Earth: {fileID: 434874035}
-  speed: 0
-  startGrav: -0.001
-  gravityDirectionChangeDis: 0
 --- !u!50 &1642474278
 Rigidbody2D:
   serializedVersion: 4
@@ -2804,8 +2815,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5
-  m_LinearDrag: 0
+  m_Mass: 2
+  m_LinearDrag: 0.2
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 255af72ffd80276438c227f46a5c7b18, type: 2}
@@ -2823,7 +2834,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 8f93acd1feb652e46b405ddce9173133, type: 2}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2901,7 +2912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c214cce7fb9964e478c7407d85822617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineMat: {fileID: 0}
+  lineMat: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   safeDis: 5
 --- !u!1 &1646777004
 GameObject:
