@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class StarPointed : MonoBehaviour
 {
+	public Material lineMat;
 	private GameObject starPre;
 	private RepulsiveForce Area;
 	private GameObject copyStars;
@@ -46,7 +47,19 @@ public class StarPointed : MonoBehaviour
 			rotScript[i].enabled = false;
 		}
 		temp.GetComponent<RepulsiveForce>().enabled = false;
+		DrawLine(temp);
 		ChangeShiningStar(temp);
+	}
+
+	void DrawLine(GameObject star)
+	{
+		star.AddComponent<CapturedStar>();
+		Debug.Log("Added");
+		if (StarArrow.Instance.linkStar != null)
+		{
+			star.GetComponent<CapturedStar>().startStarPos = StarArrow.Instance.linkStar.transform.position;
+		}
+		star.GetComponent<CapturedStar>().endStarPos = star.transform.position;
 	}
 
 	void ResetUniverseStar(GameObject uniStar)
@@ -126,6 +139,4 @@ public class StarPointed : MonoBehaviour
 		}
 		return star;
 	}
-	
-	
 }

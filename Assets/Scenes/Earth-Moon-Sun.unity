@@ -1131,7 +1131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Earth: {fileID: 802585755}
-  speed: 1
+  speed: 0
   startGrav: 0.001
   gravityDirectionChangeDis: 5
 --- !u!114 &434874044
@@ -1146,7 +1146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Earth: {fileID: 434874035}
-  speed: 1
+  speed: 0
   startGrav: 0.001
   gravityDirectionChangeDis: 8
 --- !u!114 &434874045
@@ -1161,7 +1161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Earth: {fileID: 310795754}
-  speed: 1
+  speed: 0
   startGrav: 0.001
   gravityDirectionChangeDis: 7
 --- !u!114 &434874046
@@ -2901,6 +2901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c214cce7fb9964e478c7407d85822617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lineMat: {fileID: 0}
   safeDis: 5
 --- !u!1 &1646777004
 GameObject:
