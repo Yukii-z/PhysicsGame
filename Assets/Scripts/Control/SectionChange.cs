@@ -9,6 +9,7 @@ public class SectionChange : MonoBehaviour
 	public GameObject[] background;
 	private int i=0;
 	public float[] backgroundChange;
+	public bool[] starChange;
 	public float fadeSpeed=0.7f;
 	// Use this for initialization
 	void Start ()
@@ -29,6 +30,10 @@ public class SectionChange : MonoBehaviour
 			{
 				background[i].GetComponent<SpriteRenderer>().enabled = false;
 				i++;
+				if (starChange[i])
+				{
+					StarArrow.Instance.ShuffleLinkStar();
+				}
 			}
 		}
 
