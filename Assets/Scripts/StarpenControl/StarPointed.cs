@@ -46,6 +46,7 @@ public class StarPointed : MonoBehaviour
 		{
 			rotScript[i].enabled = false;
 		}
+		temp.GetComponent<Animator>().SetTrigger("CapturedStar");
 		temp.GetComponent<RepulsiveForce>().enabled = false;
 		DrawLine(temp);
 		ChangeShiningStar(temp);
@@ -65,7 +66,8 @@ public class StarPointed : MonoBehaviour
 	void ResetUniverseStar(GameObject uniStar)
 	{
 		uniStar.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
-		uniStar.GetComponent<SpriteRenderer>().enabled = false;
+		uniStar.GetComponent<Animator>().SetTrigger("fade");
+		//uniStar.GetComponent<SpriteRenderer>().enabled = false;
 		uniStar.GetComponent<Collider2D>().enabled = false;
 		RotateWithGravity[] rotScript = uniStar.GetComponents<RotateWithGravity>();
 		for (int i=0; i < rotScript.Length; i++)
@@ -99,7 +101,8 @@ public class StarPointed : MonoBehaviour
 		Debug.Log(newStar);
 		//展现star
 		newStar.transform.position = tempPos;
-		newStar.GetComponent<SpriteRenderer>().enabled = true;
+		newStar.GetComponent<Animator>().SetTrigger("Appear");
+		//newStar.GetComponent<SpriteRenderer>().enabled = true;
 		newStar.GetComponent<Collider2D>().enabled = true;
 		RotateWithGravity[] rotScript = newStar.GetComponents<RotateWithGravity>();
 		for (int i=0; i < rotScript.Length; i++)
