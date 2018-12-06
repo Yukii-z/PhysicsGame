@@ -2420,7 +2420,7 @@ MonoBehaviour:
   skyStarList: []
   linkStar: {fileID: 0}
   starSprite:
-  - {fileID: 21300000, guid: 5792e71665506b0498e4a03409ebd9a7, type: 3}
+  - {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!114 &864152290
 MonoBehaviour:
   m_ObjectHideFlags: 0

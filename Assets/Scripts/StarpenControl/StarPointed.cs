@@ -104,7 +104,7 @@ public class StarPointed : MonoBehaviour
 		//展现star
 		newStar.transform.position = tempPos;
 		newStar.GetComponent<Animator>().SetTrigger("Appear");
-		//newStar.GetComponent<SpriteRenderer>().enabled = true;
+		newStar.GetComponent<SpriteRenderer>().enabled = true;
 		newStar.GetComponent<Collider2D>().enabled = true;
 		RotateWithGravity[] rotScript = newStar.GetComponents<RotateWithGravity>();
 		for (int i=0; i < rotScript.Length; i++)
