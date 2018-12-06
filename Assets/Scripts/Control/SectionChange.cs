@@ -19,6 +19,16 @@ public class SectionChange : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (i > backgroundChange.Length - 1)
+		{
+			GameSet.Instance.gameSituation = EGameProcess.StopGame;
+			GameSet.Instance.instructionMouse.enabled = false;
+			GameSet.Instance.instructionE.enabled = true;
+			GetComponent<Timer>().stop(); 
+			Time.timeScale = 0;
+		}
+
 		currentTime = timer.currentTime;
 		if (currentTime > backgroundChange[i])
 		{
@@ -29,20 +39,15 @@ public class SectionChange : MonoBehaviour
 			if (background[i].GetComponent<SpriteRenderer>().color.a < 0.01f)
 			{
 				background[i].GetComponent<SpriteRenderer>().enabled = false;
-				i++;
 				if (starChange[i])
 				{
 					StarArrow.Instance.ShuffleLinkStar();
 				}
+				i++;
 			}
 		}
 
-		if (i > backgroundChange.Length - 1)
-		{
-			GameSet.Instance.gameSituation = EGameProcess.StopGame;
-			GameSet.Instance.instructionMouse.enabled = false;
-			GameSet.Instance.instructionE.enabled = true;
-		}
+
 	}
 
 	public void reset()

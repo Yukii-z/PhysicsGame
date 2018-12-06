@@ -29,9 +29,9 @@ public class StarPointed : MonoBehaviour
 	{
 		if (GameSet.Instance.gameSituation == EGameProcess.PlayGame)
 		{	
+			CreatNewStar();
 			CopyNewStar(star.gameObject);
 			ResetUniverseStar(star.gameObject);
-			CreatNewStar();
 			Debug.Log("statechange");
 		}
 	}
@@ -123,7 +123,7 @@ public class StarPointed : MonoBehaviour
 		int i;
 		for (i = 0; i < StarArrow.Instance.skyStarList.Length; i++)
 		{
-			if (StarArrow.Instance.skyStarList[i].GetComponent<SpriteRenderer>().enabled == true && 
+			if (StarArrow.Instance.skyStarList[i].GetComponent<Collider2D>().enabled == true && 
 			    (StarArrow.Instance.skyStarList[i].transform.position - aimStarPos).magnitude < safeDis)
 			{
 				rightPos = false;
@@ -137,11 +137,12 @@ public class StarPointed : MonoBehaviour
 		int i;
 		i = Random.Range(0, StarArrow.Instance.skyStarList.Length);
 		GameObject star = StarArrow.Instance.skyStarList[i];
-		while (StarArrow.Instance.skyStarList[i].GetComponent<SpriteRenderer>().enabled)
+		while (StarArrow.Instance.skyStarList[i].GetComponent<Collider2D>().enabled)
 		{
 			i = Random.Range(0, StarArrow.Instance.skyStarList.Length);
 			star = StarArrow.Instance.skyStarList[i];
 		}
+		Debug.Log(star);
 		return star;
 	}
 }
