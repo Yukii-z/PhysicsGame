@@ -22,6 +22,7 @@ public class StarArrow : MonoBehaviour {
     private List<GameObject> capturedStarList = new List<GameObject>();
 	public GameObject[] skyStarList;
 	public GameObject linkStar;
+	public Sprite[] starSprite;
 
 	private void Start()
 	{

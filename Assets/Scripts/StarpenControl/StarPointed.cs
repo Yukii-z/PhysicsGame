@@ -46,6 +46,8 @@ public class StarPointed : MonoBehaviour
 		{
 			rotScript[i].enabled = false;
 		}
+		int m = Random.Range(0, StarArrow.Instance.starSprite.Length - 1);
+		temp.GetComponent<SpriteRenderer>().sprite = StarArrow.Instance.starSprite[m];
 		temp.GetComponent<Animator>().SetTrigger("CapturedStar");
 		temp.GetComponent<RepulsiveForce>().enabled = false;
 		DrawLine(temp);
