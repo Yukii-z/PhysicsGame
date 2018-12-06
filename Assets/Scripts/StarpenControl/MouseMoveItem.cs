@@ -31,9 +31,10 @@ public class MouseMoveItem : MonoBehaviour
 		line.material = lineMat;
 		line.positionCount=2; //设置两点
 		line.startColor=Color.yellow;
-		line.endColor=Color.yellow;//设置直线颜色
-		line.startWidth = 0.1f;
-		line.endWidth = 0.1f;//设置直线宽度
+		line.endColor = new Color(203,196,125,100);//设置直线颜色
+ 
+		line.startWidth =0.6f;
+		line.endWidth = 0.3f;//设置直线宽度
 	}
 	
 	// Update is called once per frame

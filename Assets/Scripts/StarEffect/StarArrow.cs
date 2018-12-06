@@ -30,6 +30,7 @@ public class StarArrow : MonoBehaviour {
 
 	public void LinkStarUpdate(GameObject newStar)
 	{
+		newStar.GetComponent<Animator>().SetTrigger("fade");
 		capturedStarList.Add(newStar);
 		linkStar = newStar;
 	}

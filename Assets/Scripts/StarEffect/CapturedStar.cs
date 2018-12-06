@@ -22,8 +22,8 @@ public class CapturedStar : MonoBehaviour
             GameObject starPen = GameObject.FindGameObjectWithTag("Starpen");
             line.material = starPen.GetComponent<StarPointed>().lineMat;
             line.positionCount=2; //设置两点
-            line.startColor=Color.white;
-            line.endColor=Color.white;//设置直线颜色
+            line.startColor=new Color(253,239,58,80);
+            line.endColor=new Color(219,149,37,80);//设置直线颜色
             line.startWidth = 0.1f;
             line.endWidth = 0.1f;//设置直线宽度
             if (startStarPos != new Vector3(0f,0f,0f))

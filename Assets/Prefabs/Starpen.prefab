@@ -186,12 +186,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragForce: 3
-  lineMat: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  lineMat: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   startLineObj: {fileID: 1891526988918924}
   startPenPos: {x: 0, y: 0, z: 0}
   controDis: 5
   slowVel: 0
   slowSpeed: 0.5
+  outOfMouseRageFadingSpeed: 0.9
 --- !u!212 &212406344301870142
 SpriteRenderer:
   m_ObjectHideFlags: 1
