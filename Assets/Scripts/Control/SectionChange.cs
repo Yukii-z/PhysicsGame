@@ -40,6 +40,8 @@ public class SectionChange : MonoBehaviour
 		if (i > backgroundChange.Length - 1)
 		{
 			GameSet.Instance.gameSituation = EGameProcess.StopGame;
+			GameSet.Instance.instructionMouse.enabled = false;
+			GameSet.Instance.instructionE.enabled = true;
 		}
 	}
 

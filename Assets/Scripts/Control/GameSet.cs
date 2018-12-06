@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameSet : MonoBehaviour
 {
@@ -20,7 +21,8 @@ public class GameSet : MonoBehaviour
 	}
 	
 	public EGameProcess gameSituation;
-	public bool highScore;
+	public Text instructionMouse;
+	public Text instructionE;
 	
 	// Use this for initialization
 	void Start (){
@@ -45,10 +47,22 @@ public class GameSet : MonoBehaviour
 
 			Reset();
 			gameSituation = EGameProcess.PreparedGame;
-		}else if (Input.GetMouseButtonDown(0) && gameSituation == EGameProcess.PreparedGame)
+		}
+		
+		if (Input.GetMouseButtonDown(0) && gameSituation == EGameProcess.PreparedGame)
 		{
+			instructionMouse.enabled = true;
+			instructionE.enabled = false;
 			gameSituation = EGameProcess.PlayGame;
 			Time.timeScale = 1;
+		}
+
+		if (Input.GetKeyDown(KeyCode.E) && gameSituation == EGameProcess.PlayGame)
+		{
+			instructionMouse.enabled = false;
+			instructionE.enabled = true;
+			Reset();
+			gameSituation = EGameProcess.PreparedGame;
 		}
 	}
 
