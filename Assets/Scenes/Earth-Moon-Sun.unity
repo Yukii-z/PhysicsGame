@@ -1232,9 +1232,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.28659895, y: -0.0413995}
+  m_Offset: {x: 0.0009323878, y: -0.0413995}
   serializedVersion: 2
-  m_Radius: 0.23701343
+  m_Radius: 0.28931585
 --- !u!212 &434874041
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1702,7 +1702,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 12.269745
+  orthographic size: 14.461964
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
