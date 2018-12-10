@@ -316,10 +316,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6dfaf5893508a46ba4a6884cf5c97b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yMin: -6.9
+  yMin: -4.5
   yMax: 2.8
   xMin: -10
-  xMax: 13
+  xMax: 14.5
   forceStrength: 1
   forceLimit: 50
 --- !u!114 &119628673
@@ -675,10 +675,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6dfaf5893508a46ba4a6884cf5c97b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yMin: -6.9
+  yMin: -4.5
   yMax: 2.8
   xMin: -10
-  xMax: 13
+  xMax: 14.5
   forceStrength: 1
   forceLimit: 50
 --- !u!114 &308002056
@@ -925,10 +925,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6dfaf5893508a46ba4a6884cf5c97b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yMin: -6.9
+  yMin: -4.5
   yMax: 2.8
   xMin: -10
-  xMax: 13
+  xMax: 14.5
   forceStrength: 1
   forceLimit: 50
 --- !u!114 &310795757
@@ -1161,10 +1161,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6dfaf5893508a46ba4a6884cf5c97b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yMin: -6.9
+  yMin: -4.5
   yMax: 2.8
   xMin: -10
-  xMax: 13
+  xMax: 14.5
   forceStrength: 1
   forceLimit: 50
 --- !u!114 &434874037
@@ -1799,10 +1799,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6dfaf5893508a46ba4a6884cf5c97b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yMin: -6.9
+  yMin: -4.5
   yMax: 2.8
   xMin: -10
-  xMax: 13
+  xMax: 14.5
   forceStrength: 1
   forceLimit: 50
 --- !u!114 &655425258
@@ -2063,10 +2063,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6dfaf5893508a46ba4a6884cf5c97b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yMin: -6.9
+  yMin: -4.5
   yMax: 2.8
   xMin: -10
-  xMax: 13
+  xMax: 14.5
   forceStrength: 1
   forceLimit: 50
 --- !u!114 &802585758
@@ -2440,12 +2440,12 @@ MonoBehaviour:
   - {fileID: 1473981269}
   - {fileID: 2040758975}
   backgroundChange:
-  - 51.8
-  - 103.6
-  - 155.4
-  - 207.2
-  - 259
-  starChange: 0000010000
+  - 25.5
+  - 51.1
+  - 76.5
+  - 102
+  - 255
+  starChange: 0101010101
   fadeSpeed: 0.06
 --- !u!114 &864152291
 MonoBehaviour:
@@ -3572,10 +3572,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6dfaf5893508a46ba4a6884cf5c97b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yMin: -6.9
+  yMin: -4.5
   yMax: 2.8
   xMin: -10
-  xMax: 13
+  xMax: 14.5
   forceStrength: 1
   forceLimit: 50
 --- !u!50 &1642474278
@@ -4047,8 +4047,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1919022135}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.77, y: -18.23, z: -4.893086}
-  m_LocalScale: {x: 3.385497, y: 3.385497, z: 3.385497}
+  m_LocalPosition: {x: 18.51, y: 0.09, z: -4.893086}
+  m_LocalScale: {x: 0.40287417, y: 0.3588627, z: 3.385497}
   m_Children: []
   m_Father: {fileID: 437717589}
   m_RootOrder: 0
