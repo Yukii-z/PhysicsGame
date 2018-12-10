@@ -1703,7 +1703,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 14.461964
+  orthographic size: 16.554749
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2421,7 +2421,7 @@ MonoBehaviour:
   skyStarList: []
   linkStar: {fileID: 0}
   starSprite:
-  - {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 21300000, guid: 6de438c821bfd2e4b852bcab4af675e7, type: 3}
 --- !u!114 &864152290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2439,15 +2439,13 @@ MonoBehaviour:
   - {fileID: 1570381907}
   - {fileID: 1473981269}
   - {fileID: 2040758975}
-  - {fileID: 2040758975}
   backgroundChange:
   - 30.55
   - 60.78
   - 120.65
   - 150.53
   - 180.43
-  - 210.96
-  starChange: 000001000000
+  starChange: 0000010000
   fadeSpeed: 0.06
 --- !u!114 &864152291
 MonoBehaviour:
@@ -2617,7 +2615,7 @@ SpriteRenderer:
   m_Size: {x: 13, y: 9.54}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &993685593
@@ -3940,7 +3938,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1696378903}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.15, y: -12.66, z: -5}
+  m_LocalPosition: {x: 11.22, y: -11.65, z: -5}
   m_LocalScale: {x: 0.14099999, y: 0.141, z: 0.141}
   m_Children: []
   m_Father: {fileID: 0}
