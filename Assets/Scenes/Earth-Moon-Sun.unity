@@ -2512,6 +2512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   background:
+  - {fileID: 1061304358}
   - {fileID: 53487218}
   - {fileID: 479567726}
   - {fileID: 1570381907}
@@ -2522,6 +2523,7 @@ MonoBehaviour:
   - 51.1
   - 76.5
   - 102
+  - 255
   - 255
   starChange: 0101010101
   fadeSpeed: 0.06
@@ -2816,7 +2818,7 @@ GameObject:
   - component: {fileID: 1061304359}
   - component: {fileID: 1061304360}
   m_Layer: 0
-  m_Name: Instruction
+  m_Name: InstructionScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
