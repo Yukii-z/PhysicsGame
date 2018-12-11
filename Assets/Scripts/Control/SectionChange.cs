@@ -11,6 +11,8 @@ public class SectionChange : MonoBehaviour
 	public float[] backgroundChange;
 	public bool[] starChange;
 	public float fadeSpeed=0.7f;
+	public AudioClip[] poetry;
+	public AudioClip bookAud;
 	// Use this for initialization
 	void Start ()
 	{
@@ -43,6 +45,10 @@ public class SectionChange : MonoBehaviour
 				{
 					StarArrow.Instance.ShuffleLinkStar();
 				}
+
+				GetComponent<AudioSource>().clip = bookAud;
+				GetComponent<AudioSource>().Play();
+				StartCoroutine(ReadThePoem(i));
 				i++;
 			}
 		}
@@ -50,6 +56,16 @@ public class SectionChange : MonoBehaviour
 
 	}
 
+	IEnumerator ReadThePoem(int x)
+	{
+		yield return new WaitForSeconds(1.0f);	
+		if (poetry[i] != null)
+		{
+			GetComponent<AudioSource>().clip = poetry[i];
+			GetComponent<AudioSource>().Play();
+		}
+	}
+	
 	public void reset()
 	{
 		i = 0;
