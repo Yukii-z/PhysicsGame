@@ -30,11 +30,11 @@ public class CoverScene : MonoBehaviour
 		}
 
 		if (!startFade)
-		{
-			Color newColor = fadeObj.GetComponent<SpriteRenderer>().color;
-			newColor.a = Mathf.Lerp(newColor.a, 1, fadeSpeed * Time.fixedDeltaTime);
-			fadeObj.GetComponent<SpriteRenderer>().color = newColor;
-			if (fadeObj.GetComponent<SpriteRenderer>().color.a < 0.01f)
+		{ 
+			Color newColor = GetComponent<SpriteRenderer>().color;
+			newColor.a = Mathf.Lerp(newColor.a, 0, fadeSpeed * Time.fixedDeltaTime);
+			GetComponent<SpriteRenderer>().color = newColor;
+			if (GetComponent<SpriteRenderer>().color.a < 0.01f)
 			{
 				startFade = !startFade;
 			}

@@ -143,6 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeObj: {fileID: 36205719}
   openTrans: 0
+  endFade: 0
 --- !u!212 &36205721
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1759,7 +1760,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 577535be1fc6b994e8f130a25c296d06, type: 3}
+  m_audioClip: {fileID: 8300000, guid: dbdd94348167eb248b5f839de9f8e8dd, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.26
   m_Pitch: 1
@@ -3897,7 +3898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9514e9f67d29dbe4c9211d1cadfd4d1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragForce: 0.01
+  dragForce: 0.006
   lineMat: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   startLineObj: {fileID: 1696378903}
   startPenPos: {x: 0, y: 0, z: 0}

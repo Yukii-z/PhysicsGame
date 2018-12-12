@@ -40,7 +40,7 @@ public class fadeIn : MonoBehaviour
 			{
 				GetComponent<SpriteRenderer>().enabled = false;
 				startFade = !startFade;
-			}
+			} 
 		}
 
 		if (openTrans)

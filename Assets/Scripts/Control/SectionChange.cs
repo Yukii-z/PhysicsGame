@@ -84,6 +84,7 @@ public class SectionChange : MonoBehaviour
 				StarArrow.Instance.skyStarList[b].GetComponent<Collider2D>().enabled = false;
 			}
 			//GameObject.FindGameObjectWithTag("Starpen").SetActive(false);
+			fadeSpeed = fadeSpeed - 1.0f;
 		}
 	}
 

@@ -30,11 +30,8 @@ public class GameSet : MonoBehaviour
 		gameSituation = EGameProcess.PreparedGame;
 		GetComponent<Timer>().enabled = true;
 		Time.timeScale = 0;
-<<<<<<< Updated upstream
 		//Screen.SetResolution(500, 750, false);
-=======
 		Screen.SetResolution(800, 600, false);
->>>>>>> Stashed changes
 
 	}
 	// Update is called once per frame
@@ -50,7 +47,7 @@ public class GameSet : MonoBehaviour
 				gameObject.GetComponent<Timer>().LowScoreRecord();
 			}*/
 
-			Reset();
+			//Reset();
 			fadeIn.Instance.endFade = true;
 			gameSituation = EGameProcess.PreparedGame;
 		}
