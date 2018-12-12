@@ -41,7 +41,7 @@ public class SectionChange : MonoBehaviour
 		currentTime = timer.currentTime;
 		if (currentTime > backgroundChange[i])
 		{
-			if (i == backgroundChange.Length - 1 && !starPenUnable)
+			if (i == backgroundChange.Length - 2 && !starPenUnable)
 			{
 				GameObject.FindGameObjectWithTag("Starpen").GetComponent<Collider2D>().enabled=false;
 				GameObject.FindGameObjectWithTag("Starpen").GetComponent<SpriteRenderer>().enabled=false;
