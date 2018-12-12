@@ -129,7 +129,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &36205720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,7 +408,7 @@ MonoBehaviour:
   yMin: -4.5
   yMax: 2.8
   xMin: -10
-  xMax: 13.5
+  xMax: 12.5
   forceStrength: 1
   forceLimit: 50
 --- !u!114 &119628673
@@ -844,7 +844,7 @@ MonoBehaviour:
   yMin: -4.5
   yMax: 2.8
   xMin: -10
-  xMax: 13.5
+  xMax: 12.5
   forceStrength: 1
   forceLimit: 50
 --- !u!114 &308002056
@@ -1094,7 +1094,7 @@ MonoBehaviour:
   yMin: -4.5
   yMax: 2.8
   xMin: -10
-  xMax: 13.5
+  xMax: 12.5
   forceStrength: 1
   forceLimit: 50
 --- !u!114 &310795757
@@ -1330,7 +1330,7 @@ MonoBehaviour:
   yMin: -4.5
   yMax: 2.8
   xMin: -10
-  xMax: 13.5
+  xMax: 12.5
   forceStrength: 1
   forceLimit: 50
 --- !u!114 &434874037
@@ -1968,7 +1968,7 @@ MonoBehaviour:
   yMin: -4.5
   yMax: 2.8
   xMin: -10
-  xMax: 13.5
+  xMax: 12.5
   forceStrength: 1
   forceLimit: 50
 --- !u!114 &655425258
@@ -2232,7 +2232,7 @@ MonoBehaviour:
   yMin: -4.5
   yMax: 2.8
   xMin: -10
-  xMax: 13.5
+  xMax: 12.5
   forceStrength: 1
   forceLimit: 50
 --- !u!114 &802585758
@@ -2609,17 +2609,15 @@ MonoBehaviour:
   - {fileID: 2040758975}
   - {fileID: 2033061139}
   backgroundChange:
-  - 10.3
-  - 30.2
-  - 50.1
-  - 70.2
-  - 90.5
-  - 120.1
-  - 190
+  - 10.32
+  - 30.24
+  - 55.18
+  - 83.68
+  - 105.36
+  - 197.55
+  - 226.98
   starChange: 00000001010101
   fadeSpeed: 0.9
-  poetry: []
-  bookAud: {fileID: 8300000, guid: d04ef345695b2fc4fb971611ab9b4e6c, type: 3}
 --- !u!114 &864152291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3920,7 +3918,7 @@ MonoBehaviour:
   yMin: -4.5
   yMax: 2.8
   xMin: -10
-  xMax: 13.5
+  xMax: 12.5
   forceStrength: 1
   forceLimit: 50
 --- !u!82 &1642474275
@@ -4390,7 +4388,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1696378903}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.22, y: -11.65, z: -5}
+  m_LocalPosition: {x: 11.026, y: -11.449, z: -5}
   m_LocalScale: {x: 0.14099999, y: 0.141, z: 0.141}
   m_Children: []
   m_Father: {fileID: 0}
