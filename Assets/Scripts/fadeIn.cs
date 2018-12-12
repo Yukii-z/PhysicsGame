@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class fadeIn : MonoBehaviour
 {
@@ -22,10 +23,11 @@ public class fadeIn : MonoBehaviour
 	
 	public GameObject fadeObj;
 	private float fadeSpeed = 0.9f;
-	private float transferSpeed = 3.0f;
+	private float transferSpeed = 4.0f;
 	private bool transState;
 	public bool openTrans;
 	private bool startFade = true;
+	public bool endFade;
 
 	// Update is called once per frame
 	void Update () {
@@ -44,6 +46,11 @@ public class fadeIn : MonoBehaviour
 		if (openTrans)
 		{
 			Transfer();
+		}
+
+		if (endFade)
+		{
+			
 		}
 	}
 
@@ -73,5 +80,18 @@ public class fadeIn : MonoBehaviour
 			}
 		}
 		
+	}
+
+	void EndFade()
+	{
+		GetComponent<SpriteRenderer>().enabled = true;
+		Color newColor = fadeObj.GetComponent<SpriteRenderer>().color;
+		newColor.a = Mathf.Lerp(newColor.a, 1, transferSpeed * Time.fixedDeltaTime);
+		fadeObj.GetComponent<SpriteRenderer>().color = newColor;
+		if (fadeObj.GetComponent<SpriteRenderer>().color.a > 0.99f)
+		{
+			endFade = !endFade;
+			SceneManager.LoadScene(0);
+		}
 	}
 }

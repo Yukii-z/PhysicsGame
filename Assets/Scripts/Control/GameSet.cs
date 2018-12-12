@@ -30,7 +30,7 @@ public class GameSet : MonoBehaviour
 		gameSituation = EGameProcess.PreparedGame;
 		GetComponent<Timer>().enabled = true;
 		Time.timeScale = 0;
-		Screen.SetResolution(500, 750, false);
+		//Screen.SetResolution(500, 750, false);
 
 	}
 	// Update is called once per frame
@@ -47,7 +47,7 @@ public class GameSet : MonoBehaviour
 			}*/
 
 			Reset();
-			SceneManager.LoadScene(0);
+			fadeIn.Instance.endFade = true;
 			gameSituation = EGameProcess.PreparedGame;
 		}
 		

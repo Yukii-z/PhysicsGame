@@ -5,13 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class CoverScene : MonoBehaviour
 {
+	private bool startFade;
 	private bool fade;
 	public GameObject fadeObj;
 	private bool bookAud;
-	public float fadeSpeed = 0.5f;
+	public float fadeSpeed = 4.0f;
+	private GameObject mainCam;
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+	{
+		mainCam = GameObject.FindGameObjectWithTag("MainCamera");
 	}
 	
 	// Update is called once per frame
@@ -21,11 +24,22 @@ public class CoverScene : MonoBehaviour
 			fade = true;
 			if (!bookAud)
 			{
-				GetComponent<AudioSource>().Play();
+				mainCam.GetComponent<AudioSource>().Play();
 				bookAud = !bookAud;
 			}
 		}
 
+		if (!startFade)
+		{
+			GetComponent<SpriteRenderer>().enabled = true;
+			Color newColor = fadeObj.GetComponent<SpriteRenderer>().color;
+			newColor.a = Mathf.Lerp(newColor.a, 1, fadeSpeed * Time.fixedDeltaTime);
+			fadeObj.GetComponent<SpriteRenderer>().color = newColor;
+			if (fadeObj.GetComponent<SpriteRenderer>().color.a < 0.01f)
+			{
+				startFade = !startFade;
+			}
+		}
 		if (fade)
 		{Debug.Log("input");
 			fadeObj.GetComponent<SpriteRenderer>().color = new Color(0,0,0,

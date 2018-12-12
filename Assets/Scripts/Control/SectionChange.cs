@@ -43,9 +43,7 @@ public class SectionChange : MonoBehaviour
 		{
 			if (i == backgroundChange.Length - 2 && !starPenUnable)
 			{
-				GameObject.FindGameObjectWithTag("Starpen").GetComponent<Collider2D>().enabled=false;
-				GameObject.FindGameObjectWithTag("Starpen").GetComponent<SpriteRenderer>().enabled=false;
-				GameObject.FindGameObjectWithTag("Starpen").GetComponent<LineRenderer>().enabled=false;
+				StartCoroutine(FadeStarpen());
 				starPenUnable = !starPenUnable;
 			}
 			if (!bookAudPlay)
@@ -99,6 +97,13 @@ public class SectionChange : MonoBehaviour
 		}
 	}
 	
+	IEnumerator FadeStarpen()
+	{
+		yield return new WaitForSeconds(0.5f);
+		GameObject.FindGameObjectWithTag("Starpen").GetComponent<Collider2D>().enabled=false;
+		GameObject.FindGameObjectWithTag("Starpen").GetComponent<SpriteRenderer>().enabled=false;
+		GameObject.FindGameObjectWithTag("Starpen").GetComponent<LineRenderer>().enabled=false;
+	}
 	public void reset()
 	{
 		i = 0;
