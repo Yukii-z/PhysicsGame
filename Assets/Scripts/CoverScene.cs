@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class CoverScene : MonoBehaviour
 {
 	private bool fade;
-	private GameObject fadeObj;
+	public GameObject fadeObj;
+	private bool bookAud;
 	public float fadeSpeed = 0.5f;
 	// Use this for initialization
 	void Start () {
@@ -18,16 +19,20 @@ public class CoverScene : MonoBehaviour
 		if (Input.anyKeyDown)
 		{
 			fade = true;
+			if (!bookAud)
+			{
+				GetComponent<AudioSource>().Play();
+				bookAud = !bookAud;
+			}
 		}
 
 		if (fade)
-		{
-			fadeObj.GetComponent<SpriteRenderer>().color = new Color(fadeObj.GetComponent<SpriteRenderer>().color.r,
-				fadeObj.GetComponent<SpriteRenderer>().color.b,
-				fadeObj.GetComponent<SpriteRenderer>().color.g,
-				fadeObj.GetComponent<SpriteRenderer>().color.a * Mathf.Lerp(fadeObj.GetComponent<SpriteRenderer>().color.a,1f,fadeSpeed * Time.deltaTime));
-			if (fadeObj.GetComponent<SpriteRenderer>().color.a < 0.01f)
+		{Debug.Log("input");
+			fadeObj.GetComponent<SpriteRenderer>().color = new Color(0,0,0,
+				Mathf.Lerp(fadeObj.GetComponent<SpriteRenderer>().color.a,1.0f,fadeSpeed * Time.deltaTime));
+			if (fadeObj.GetComponent<SpriteRenderer>().color.a >0.99f)
 			{
+				fade = false;
 				SceneManager.LoadScene(1);
 			}
 		}

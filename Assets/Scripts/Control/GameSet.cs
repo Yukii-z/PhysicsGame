@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameSet : MonoBehaviour
@@ -46,6 +47,7 @@ public class GameSet : MonoBehaviour
 			}*/
 
 			Reset();
+			SceneManager.LoadScene(0);
 			gameSituation = EGameProcess.PreparedGame;
 		}
 		
@@ -55,16 +57,22 @@ public class GameSet : MonoBehaviour
 			instructionE.enabled = false;
 			gameSituation = EGameProcess.PlayGame;
 			Time.timeScale = 1;
+			GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>().Play();
+			GameObject.FindGameObjectWithTag("Starpen").GetComponent<MusicMute>().muteStart = true;
 		}
 
 		if (Input.GetKeyDown(KeyCode.E) && gameSituation == EGameProcess.PlayGame)
 		{
+			/*GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>().Stop();
+			GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>().Play();
 			instructionMouse.enabled = false;
 			instructionE.enabled = true;
 			Reset();
-			gameSituation = EGameProcess.PreparedGame;
+			gameSituation = EGameProcess.PreparedGame;*/
+			SceneManager.LoadScene(1);
 		}
 	}
+
 
 	void Reset()
 	{

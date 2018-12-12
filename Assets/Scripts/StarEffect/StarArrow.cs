@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityScript.Lang;
 
-public class StarArrow : MonoBehaviour {
+public class StarArrow : MonoBehaviour{
 	private static StarArrow instance;
 	public static StarArrow Instance
 	{
