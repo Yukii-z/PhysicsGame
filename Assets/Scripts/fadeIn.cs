@@ -50,7 +50,7 @@ public class fadeIn : MonoBehaviour
 
 		if (endFade)
 		{
-			
+			EndFade();
 		}
 	}
 

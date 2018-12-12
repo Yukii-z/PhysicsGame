@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class CoverScene : MonoBehaviour
 {
-	private bool startFade;
+	private bool startFade=false;
 	private bool fade;
 	public GameObject fadeObj;
 	private bool bookAud;
@@ -31,7 +31,6 @@ public class CoverScene : MonoBehaviour
 
 		if (!startFade)
 		{
-			GetComponent<SpriteRenderer>().enabled = true;
 			Color newColor = fadeObj.GetComponent<SpriteRenderer>().color;
 			newColor.a = Mathf.Lerp(newColor.a, 1, fadeSpeed * Time.fixedDeltaTime);
 			fadeObj.GetComponent<SpriteRenderer>().color = newColor;
@@ -40,6 +39,7 @@ public class CoverScene : MonoBehaviour
 				startFade = !startFade;
 			}
 		}
+		
 		if (fade)
 		{Debug.Log("input");
 			fadeObj.GetComponent<SpriteRenderer>().color = new Color(0,0,0,
